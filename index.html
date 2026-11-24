@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover extraordinary destinations and travel packages with TEJOE TRAVELS. Your journey, our passion.">
+  <title>TEJOE TRAVELS | Your Journey, Our Passion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="TEJOE TRAVELS home"><span class="brand-mark">T</span><span>TEJOE <b>TRAVELS</b><small>YOUR JOURNEY, OUR PASSION.</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#destinations">Destinations</a><a href="#packages">Packages</a><a href="#experiences">Experiences</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions"><button class="text-button" id="loginBtn">Log in</button><a class="btn btn-small" href="#planner">Plan a trip <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow light"><span></span> THE WORLD IS WAITING</div>
+        <h1>Explore the world,<br><em>one journey</em> at a time.</h1>
+        <p>Discover extraordinary places, meaningful experiences, and journeys designed around you.</p>
+        <a href="#destinations" class="btn">Explore destinations <span>↗</span></a>
+      </div>
+      <div class="hero-note"><span>01 / 04</span><i></i> Find your somewhere</div>
+      <form class="search-panel" id="searchForm">
+        <label><span>DESTINATION</span><input id="searchDestination" type="text" placeholder="Where do you want to go?"></label>
+        <label><span>DEPARTURE CITY</span><input id="departure" type="text" placeholder="e.g. Vijayawada"></label>
+        <label><span>TRAVEL DATE</span><input id="travelDate" type="date"></label>
+        <label><span>TRAVELERS</span><select id="travelers"><option>2 travelers</option><option>1 traveler</option><option>3 travelers</option><option>4 travelers</option><option>5+ travelers</option></select></label>
+        <button class="btn search-btn" type="submit">Search trips <span>⌕</span></button>
+      </form>
+    </section>
+
+    <section class="section intro-section">
+      <div><div class="eyebrow">A WORLD OF POSSIBILITIES</div><h2>Make room for<br><em>the extraordinary.</em></h2></div>
+      <p class="intro-copy">From quiet coastlines to lively cities and mountain escapes, find a trip that feels like it was made just for you.</p>
+    </section>
+
+    <section class="section" id="destinations">
+      <div class="section-heading"><div><div class="eyebrow">CURATED FOR THE CURIOUS</div><h2>Popular destinations</h2></div><a class="underlink" href="#destinations">Discover all places ↗</a></div>
+      <div class="filter-row" id="destinationFilters"><button class="filter active" data-filter="all">All places</button><button class="filter" data-filter="India">India</button><button class="filter" data-filter="International">International</button></div>
+      <div class="destination-grid" id="destinationGrid"></div>
+    </section>
+
+    <section class="experience-band" id="experiences">
+      <div class="experience-image"></div><div class="experience-copy"><div class="eyebrow light">TRAVEL YOUR WAY</div><h2>Not just a trip.<br><em>A feeling to remember.</em></h2><p>Whether you're celebrating togetherness, chasing a new adventure, or taking a well-earned break, we'll help you make it yours.</p><a href="#planner" class="btn btn-light">Create your journey ↗</a></div>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="section-heading"><div><div class="eyebrow">THOUGHTFULLY PUT TOGETHER</div><h2>Featured getaways</h2></div><p class="muted">Handpicked journeys. Beautiful memories.</p></div>
+      <div class="package-grid" id="packageGrid"></div>
+    </section>
+
+    <section class="planner-section" id="planner">
+      <div class="planner-copy"><div class="eyebrow light">YOUR TRIP, YOUR RULES</div><h2>Let's plan something<br><em>unforgettable.</em></h2><p>Tell us what you have in mind. Get a simple trip estimate to start shaping your next adventure.</p><div class="planner-perks"><span>✦ Made around you</span><span>✦ Flexible budgets</span><span>✦ Personal touches</span></div></div>
+      <form class="planner-form" id="plannerForm">
+        <h3>Build your trip</h3><p class="muted">A few details are all we need.</p>
+        <div class="form-grid">
+          <label>Starting from<input required id="planFrom" placeholder="e.g. Guntur"></label>
+          <label>Going to<input required id="planTo" placeholder="e.g. Kerala"></label>
+          <label>Travel date<input required id="planDate" type="date"></label>
+          <label>Travel style<select id="planType"><option>Family</option><option>Honeymoon</option><option>Adventure</option><option>Friends</option><option>Solo</option><option>Luxury</option></select></label>
+          <label>Travelers<input id="planPeople" type="number" min="1" max="30" value="2"></label>
+          <label>Budget per person<select id="planBudget"><option value="10000">Under ₹10,000</option><option value="20000">₹10,000 – ₹20,000</option><option value="40000">₹20,000 – ₹40,000</option><option value="70000">₹40,000+</option></select></label>
+        </div>
+        <button class="btn full-btn" type="submit">Get my trip estimate ↗</button><div id="plannerResult" class="result-box" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="section why-section" id="about">
+      <div class="section-heading"><div><div class="eyebrow">THE TEJOE DIFFERENCE</div><h2>Travel with confidence</h2></div><p class="muted">The little details make a big difference.</p></div>
+      <div class="benefit-grid">
+        <article><span class="benefit-icon">✧</span><h3>Trips made personal</h3><p>Thoughtful itineraries shaped around your interests and pace.</p></article>
+        <article><span class="benefit-icon">◈</span><h3>Clear, honest pricing</h3><p>Understand your trip estimate with no confusing surprises.</p></article>
+        <article><span class="benefit-icon">♡</span><h3>Memories that matter</h3><p>Find experiences that turn a holiday into a story.</p></article>
+        <article><span class="benefit-icon">⌖</span><h3>Here when you need us</h3><p>Friendly support to help you plan with peace of mind.</p></article>
+      </div>
+    </section>
+
+    <section class="quote-section"><div class="eyebrow light">A NOTE FROM OUR TRAVELERS</div><div class="quote-mark">“</div><blockquote>We came back with a camera full of pictures and a heart full of memories. Every little detail felt special.</blockquote><div class="quote-author"><span class="avatar">AK</span><span><b> A happy traveler</b><small>Kerala getaway</small></span><span class="stars">★★★★★</span></div></section>
+
+    <section class="newsletter"><div><div class="eyebrow">A LITTLE INSPIRATION</div><h2>Somewhere wonderful<br>is calling.</h2><p>Get destination ideas and travel inspiration in your inbox.</p></div><form id="newsletterForm"><label class="sr-only" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required><button class="btn" type="submit">Subscribe ↗</button><small id="newsletterMessage" aria-live="polite"></small></form></section>
+  </main>
+
+  <footer id="contact"><div class="footer-top"><div class="footer-brand"><a class="brand brand-footer" href="#home"><span class="brand-mark">T</span><span>TEJOE <b>TRAVELS</b><small>YOUR JOURNEY, OUR PASSION.</small></span></a><p>Making it easier to find your next favourite place.</p></div><div><h4>Explore</h4><a href="#destinations">Destinations</a><a href="#packages">Packages</a><a href="#experiences">Experiences</a></div><div><h4>Company</h4><a href="#about">About us</a><a href="#contact">Contact</a><a href="#planner">Plan a trip</a></div><div><h4>Get in touch</h4><a href="mailto:hello@tejoetravels.example">hello@tejoetravels.example</a><a href="#contact">India · Online support</a><p class="socials">Instagram&nbsp;&nbsp; Pinterest&nbsp;&nbsp; Facebook</p></div></div><div class="footer-bottom"><span>© 2026 TEJOE TRAVELS. All rights reserved.</span><span>Privacy · Terms · Cancellation policy</span></div></footer>
+
+  <dialog id="infoDialog"><button class="dialog-close" id="dialogClose" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
